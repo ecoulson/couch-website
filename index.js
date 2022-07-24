@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 app.get("/images", async (req, res) => {
   try {
-    const browser = await puppeteer.launch({});
+    const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
     const page = await browser.newPage();
     await page.goto(scrapingURL);
     let couches = await page.$$eval("img", (imgs) =>

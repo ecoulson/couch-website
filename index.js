@@ -1,9 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config();
 const express = require("express");
 const puppeteer = require("puppeteer");
 const scrapingURL = "https://sfbay.craigslist.org/search/sss?query=couch";
 const app = express();
 const cors = require("cors");
-const port = 3000;
+const port = process.env.PORT;
 
 app.use(
   cors({

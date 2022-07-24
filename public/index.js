@@ -1,4 +1,4 @@
-const scrapingURL = "http://localhost:3000/images";
+const scrapingURL = "https://couch-website.herokuapp.com/images";
 const app = document.getElementById("app");
 
 class Couch {

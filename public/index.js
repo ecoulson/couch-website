@@ -1,4 +1,4 @@
-const scrapingURL = "https://couch-website.herokuapp.com/images";
+const scrapingUrl = "https://couch-website.herokuapp.com/images";
 const app = document.getElementById("app");
 
 class Couch {
@@ -26,7 +26,7 @@ function renderCouches(couches) {
 }
 
 function getImages() {
-  return fetch(scrapingURL, {}).then((res) => res.json());
+  return fetch(scrapingUrl, {}).then((res) => res.json());
 }
 
 function render() {
